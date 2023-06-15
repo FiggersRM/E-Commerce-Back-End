@@ -49,7 +49,7 @@ router.put("/:id", async (req, res) => {
   try {
     const catData = await Category.update(req.body, {
       where: {
-        id: req.params.id,
+        id: req.params.id
       },
     });
     if (!catData) {
