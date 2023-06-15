@@ -67,13 +67,13 @@ router.delete("/:id", async (req, res) => {
   try {
     const catData = await Category.destroy({
       where: {
-        id: req.params.id,
+        id: req.params.id
       },
     });
     if (!catData) {
-      res.status(404).json({ message: "No category found with this id" });
+      res.status(404).json({ message: 'No category found with this id' });
       return;
-    }
+    };
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
